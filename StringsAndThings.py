@@ -59,3 +59,98 @@ if "y" in name:
     print("The letter y is in the name")
 else:
     print("The letter y is not in the name")
+
+    # String Methods to investigate:
+    # Method        Use Example         Explanation
+    # center        aStr.center(w)
+
+string = "Frank N. Stein"
+
+new_string = string.center(24)
+
+print("Centered String: ", new_string)
+
+# The string "center" moves the words or text over a certain amount of characters.
+
+    # ljust         aStr.ljust(w)
+
+string = 'cat'
+width = 5
+
+print(string.ljust(width))
+
+# the string ljust makes the total number of characters equal to the width.
+
+    # rjust         aStr.rjust(w)
+
+string = 'dog'
+width = 5
+print(string.rjust(width))
+
+# the string ljust makes the total number of characters equal to the width to the right.
+
+    # upper         aStr.upper()
+
+string = "this should be uppercase!"
+print(string.upper())
+string = "Th!s Sh0uLd B3 uPp3rCas3!"
+print(string.upper())
+
+# the upper string makes any text in the string uppercase.
+    # lower         aStr.lower()
+
+string = "THIS SHOULD BE LOWERCASE!"
+print(string.lower())
+string = "Th!s Sh0uLd B3 L0w3rCas3!"
+print(string.lower())
+
+# the lower string makes any text inside of the string lowercase
+    # index         aStr.index(item)
+
+sentence = 'Python programming is fun.'
+result = sentence.index('is fun')
+print("Substring 'is fun':", result)
+result = sentence.index('Java')
+print("Substring 'Java':", result)
+
+# The index string uses the substring that is inside of the main string and prints that text.
+    # rindex        aStr.rindex(item)
+
+quote = 'Let it be, let it be, let it be'
+
+result = quote.rindex('let it')
+print("Subtstring 'let it':", result)
+result = quote.rindex('small')
+print("Substring 'small ':", result)
+
+# the rindex string is similar to index but if the substring is not found
+# the result comes back as -1.
+
+    # find          aStr.find(item)
+
+quote = 'Let it be, let it be, let it be'
+result = quote.find('let it')
+print("Substring 'let it':", result)
+result = quote.find('small')
+print("Substring 'small ':", result)
+
+# If the substring exist the result is the index of the first occurrence if not -1.
+    # rfind         aStr.rfind(item)
+
+quote = 'Let it be, let it be, let it be'
+result = string.rfind('let it')
+print("Substring 'let it':", result)
+result = quote.rfind('small')
+print("Substring 'small ':", result)
+
+#If substring exists inside the string, it returns the highest index where substring is found.
+#If substring doesn't exist inside the string, it returns -1.
+
+    # replace       aStr.replace(old, new)
+
+song = 'cold, cold heart'
+print(song.replace('cold', 'hurt'))
+song = 'Let it be, let it be, let it be, let it be'
+print(song.replace('let', "don't let", 2))
+
+    # Be sure to include multiple examples of all of them in use
