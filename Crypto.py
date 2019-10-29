@@ -30,3 +30,7 @@ def scramble2Decrypt(cipherText):
         plainText = plainText + evenChars[-1]
 
     return plainText
+
+def encryptMessage():
+    msg = input("Enter the message to encrypt: ")
+    cipherText = scramble2Encrypt()
