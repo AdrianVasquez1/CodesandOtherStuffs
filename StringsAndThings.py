@@ -123,6 +123,8 @@ quote = 'Let it be, let it be, let it be'
 
 result = quote.rindex('let it')
 print("Substring 'let it':", result)
+
+quote = 'The world is so small'
 result = quote.rindex('small')
 print("Substring 'small ':", result)
 
@@ -162,17 +164,23 @@ print(song.replace('let', "don't let", 2))
 
 print(ord('B'))
 
-print(chr(97+13))
+print(chr(97 + 13))
 
 print(str(12548))
 
 # testing functions from mapper.py
 
-from mapper import *
+from Mapper import *
 
 print(letterToIndex('P'))
 print(indexToLetter(10))
 
-from crypto import *
+from Crypto import *
 
-print(scramble2Encrypt("GOOD MORNING LADIES ADN GENTLEMENWW"))
+print(scramble2Encrypt("GOOD MORNING LADIES ADN GENTLEMEN"))
+print(scramble2Encrypt("H ETN SA IEOLCTEMEIGI TFV COK"))
+print(scramble2Decrypt(scramble2Decrypt(" T AIOCEEG F OHENS ELTMIITVCK")))
+
+stripSpace("Who lives in a pineapple under the sea?")
+
+print(caesarEncrypt("Alonzo is being a bully", 4))
