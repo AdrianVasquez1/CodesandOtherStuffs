@@ -60,10 +60,21 @@ def caesarEncrypt(plainText, shift):
 
 print(caesarEncrypt("Alonzo is bullying me", 2))
 
-
-
-
-
-
-
 # write a caesarDecrypt(cipherText, shift)
+
+def caesarDecrypt(plainText, shift):
+    cipherText = ""
+    for ch in plainText:
+        if ch in upper:
+            index = upper.find(ch)
+            nextIndex = (index + shift) % 27
+            if nextIndex < 0:
+                nextIndex = 27 + nextIndex
+            cipherText += upper[nextIndex]
+        else:
+            index = lower.find(ch)
+            nextIndex = (index + shift) % 27
+            if nextIndex < 0:
+                nextIndex = 27 + nextIndex
+                cipherText += lower[nextIndex]
+        return cipherText
