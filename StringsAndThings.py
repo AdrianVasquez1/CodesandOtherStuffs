@@ -183,4 +183,4 @@ print(scramble2Decrypt(scramble2Decrypt(" T AIOCEEG F OHENS ELTMIITVCK")))
 
 stripSpace("Who lives in a pineapple under the sea?")
 
-print(caesarEncrypt("Alonzo is being a bully", 4))
+print(caesarEncrypt("Alonzo is bullying me", 4))

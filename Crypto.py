@@ -41,27 +41,29 @@ def stripSpace(text):
         print(text.replace(" ", ""))
 
 # write a caesarEncrypt(plainText, shift)
-def caesarEncrypt(plainText, s):
-   result = ""
-
-
-# transverse the plain text
-    for i in range(len(plainText)):
-        char = plainText[i]
-    # Encrypt uppercase characters in plain text
-
-        if (char.isupper()):
-            result += chr((ord(char) + s - 65) % 26 + 65)
-    # Encrypt lowercase characters in plain text
+def caesar2Encrypt(plainText, shift):
+    plainText = ""
+upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+lower = "abcdefghijklmnopqrstuvwxyz"
+def caesarEncrypt(plainText, shift):
+    cipherText = ""
+    for ch in plainText:
+        if ch in upper:
+            index = upper.find(ch)
+            nextIndex = (index + shift) % 26
+            cipherText += upper[nextIndex]
         else:
-            result += chr((ord(char) + s - 97) % 26 + 97)
-        return result
-# check the above function
-text = "CAESAR CIPHER DEMO"
-s = 4
+            index = lower.find(ch)
+            nextIndex = (index + shift) % 26
+            cipherText += lower[nextIndex]
+    return cipherText
 
-print("Plain Text : " + text)
-print("Shift pattern : " + str(s))
-print("Cipher: " + encrypt(plainText, s))
+print(caesarEncrypt("Alonzo is bullying me", 2))
+
+
+
+
+
+
 
 # write a caesarDecrypt(cipherText, shift)
